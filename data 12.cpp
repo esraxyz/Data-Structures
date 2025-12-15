@@ -1,15 +1,15 @@
-/*Bir grafı array ile göstermek için en basit yöntem:
-Adjacency List (Komşuluk Listesi)
-Her düğüm için bir array oluşturdum.
-Bu array içinde o düğüme bağlı olan tüm düğümler tuttum.
-Örneğin çizdiğin yapıya göre:
+/*Bir grafk array ile gÃ¶stermek iÃ§in en basit yÃ¶ntem:
+Adjacency List (Kompuluk Listesi)
+Her dÃ¼Ã°Ã¼m iÃ§in bir array oluÃ¾turdum.
+Bu array iÃ§inde o dÃ¼ÄŸÃ¼me baÃ°lÃ½ olan tÃ¼m dÃ¼Ã°Ã¼mler tuttum.
+Ã–rneÄŸimiz Ã§izdiÄŸim yapÄ±ya gÃ¶re:
 C1 ? C2
 C2 ? C3
 C3 ? C4, C5
-C4 ? (bağ yok)
-C5 ? (bağ yok
+C4 ? (baÄŸ yok)
+C5 ? (baÄŸ yok
 
-Bunu şöyle array'lerle tutarsın:
+Bunu Ã¾Ã¶yle array'lerle tutarsÃ½n:
 
 neighbors[1] = {2}
 neighbors[2] = {3}
@@ -20,10 +20,10 @@ neighbors[5] = {}
 #include <stdio.h>
 #define MAX 10
 int main() {
-    // Komşuluk listeleri
+    // KomÃ¾uluk listeleri
     int neighbors[MAX][MAX] = {0};
     int count[MAX] = {0};
-    // Bağlantılar (C1 -> C2)
+    // BaÃ°lantÃ½lar (C1 -> C2)
     neighbors[1][ count[1]++ ] = 2;
 
     // C2 -> C3
@@ -33,7 +33,7 @@ int main() {
     neighbors[3][ count[3]++ ] = 4;
     neighbors[3][ count[3]++ ] = 5;
 
-    // Yazdırma
+    // YazdÃ½rma
     for(int i = 1; i <= 5; i++) {
         printf("C%d -> ", i);
         for(int j = 0; j < count[i]; j++) {
@@ -44,4 +44,5 @@ int main() {
 
     return 0;
 }
+
 
