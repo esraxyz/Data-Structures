@@ -1,17 +1,17 @@
-/*Genelde Binary Tree (ikili ağaç) için kullanılır ve dizide indekslere göre yerleşim kuralları vardır.
- 1. Root (kök) her zaman index 0'dadır.
- 2. Bir elemanın çocuklarını bulma
-Dizideki bir elemanın index'i = i ise:
-"	Left child (sol çocuk): 2*i + 1
-"	Right child (sağ çocuk): 2*i + 2
-3. Bir elemanın parent'ını bulma
-Parent index = (i - 1) / 2 (tam sayı bölme)
+/*Genelde Binary Tree (ikili aÃ°aÃ§) iÃ§in kullanÃ½lÃ½r ve dizide indekslere gÃ¶re yerleÃ¾im kurallarÃ½ vardÃ½r.
+ 1. Root (kÃ¶k) her zaman index 0'dadÃ½r.
+ 2. Bir elemanÃ½n Ã§ocuklarÃ½nÃ½ bulma
+Dizideki bir elemanÃ½n index'i = i ise:
+"	Left child (sol Ã§ocuk): 2*i + 1
+"	Right child (saÃ° Ã§ocuk): 2*i + 2
+3. Bir elemanÃ½n parent'Ã½nÃ½ bulma
+Parent index = (i - 1) / 2 (tam sayÃ½ bÃ¶lme)
 */
 
 
 #include <stdio.h>
 
-int tree[100]; // array tabanlı tree
+int tree[100]; // array tabanlÃ½ tree
 
 void setRoot(int value){
     tree[0] = value;
